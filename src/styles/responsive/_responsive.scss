@@ -1,0 +1,26 @@
+$break-large: 992px;
+$break-medium: 768px;
+.b-page-eat {
+  @media screen and(max-width:$break-large) {
+    position: relative;
+    padding: 80px 0;
+    .b-eat {
+      .b-block-content {
+        width: 30%;
+        text-align: center;
+      }
+    }
+  }
+  @media screen and(max-width:$break-medium) {
+    position: relative;
+    padding: 80px 0;
+    .b-eat {
+      flex-wrap: wrap;
+      .b-block-content {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+  }
+}
