@@ -1,0 +1,48 @@
+// ----------------------------------------------------------------------
+// Font
+// ----------------------------------------------------------------------
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=vietnamese");
+@font-face {
+  font-family: "Lato";
+  src: url("./../fonts/Lato-Reg.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato Bol";
+  src: url("./../fonts/Lato-Bol.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lato Light";
+  src: url("./../fonts/Lato-Lig.ttf") format("truetype");
+}
+// ----------------------------------------------------------------------
+// Base
+// ----------------------------------------------------------------------
+@import "base/mixins";
+@import "base/variables";
+@import "base/extends";
+@import "base/reset";
+@import "base/fonts";
+@import "base/utility";
+@import "base/button";
+
+// ----------------------------------------------------------------------
+// Layout
+// ----------------------------------------------------------------------
+@import "layout/header";
+@import "layout/footer";
+
+// ----------------------------------------------------------------------
+// Custom
+// ----------------------------------------------------------------------
+@import "custom/custom-plugin";
+
+// ----------------------------------------------------------------------
+// Pages
+// ----------------------------------------------------------------------
+@import "pages/homepage";
+
+// ----------------------------------------------------------------------
+// Responsive
+// ----------------------------------------------------------------------
+@import "responsive/responsive";
