@@ -30,6 +30,11 @@ $break-medium: 768px;
           margin-bottom: 10px;
         }
       }
+
+.b-page-header {
+  @media screen and(max-width:$break-medium) {
+    .b-register {
+      display: none;
     }
   }
 }
