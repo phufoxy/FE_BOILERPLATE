@@ -2,22 +2,12 @@ $break-large: 992px;
 $break-medium: 768px;
 .b-page-introduc {
   @media screen and(max-width:$break-large) {
-    display: block;
-    padding-top: 50px;
-    z-index: 1;
-    .b-block-content {
-      @include flexbox();
-      flex-wrap: wrap;
-      .b-content-left {
+    .b-block {
+      .b-block-left {
         display: none;
       }
-      .b-content-right {
-        position: relative;
+      .b-block-right {
         width: 100%;
-        .b-info {
-          width: 100%;
-          padding: 0px;
-        }
       }
     }
   }

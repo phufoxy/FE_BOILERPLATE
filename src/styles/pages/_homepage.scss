@@ -1,82 +1,72 @@
-.dot-after-bottom {
+.b-dot {
   position: relative;
-  &:after {
+  &::after {
     content: "";
     position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 80px;
-    height: 1.5px;
+    width: 100px;
+    height: 2px;
+    border-radius: 100%;
     background-color: $cl_red;
-    border-radius: 50% 0 50% 0;
-    @include transform(translate(-50%, 0));
+    left: 50%;
+    bottom: -5px;
+    @include transform-customize(translate(-50%, 0));
   }
   &.left {
-    &:after {
-      left: 0%;
-      @include transform(translate(0%, 0));
+    &::after {
+      left: 0;
+      @include transform-customize(translate(0%, 0));
     }
   }
 }
 .b-page-introduc {
   display: block;
-  padding-top: 50px;
-  z-index: 1;
-  .b-block-content {
+  padding-top: 100px;
+  background-color: #f7f7f7;
+  .b-block {
     @include flexbox();
-    .b-content-left {
-      @include flexbox();
-      @include justify-content(flex-end);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    .b-block-left {
+      position: relative;
       width: 40%;
-      .b-content {
+      > img {
         position: relative;
-        > img {
-          width: 100%;
-          position: relative;
-          top: 10px;
-          height: 100%;
-        }
-        .b-images {
+        width: 100%;
+        height: 100%;
+        top: 10px;
+      }
+      .b-images {
+        img {
           position: absolute;
-          left: 52%;
-          top: 70%;
-          width: 82%;
-          @include transform(translate(-50%, -50%));
-          > img {
-            z-index: -999;
-            height: 100%;
-            width: 100%;
-          }
+          top: 20%;
+          left: 13%;
+          width: 80%;
+          height: 100%;
         }
       }
     }
-    .b-content-right {
-      position: relative;
-      width: 60%;
-      .b-info {
-        width: 100%;
-        padding: 70px;
+    .b-block-right {
+      width: 50%;
+      .b-content {
+        padding: 50px 0;
         .b-text-title {
           font-family: "Lato Bol";
-          color: $cl_black;
           @include rem("font-size", 18);
-          @include rem("line-height", 30);
-          margin-bottom: 10px;
+          color: $cl_black;
+          margin-bottom: 20px;
         }
         .b-text-norm {
-          font-family: "Lato Lig";
+          font-family: "Lato";
           @include rem("font-size", 16);
-          @include rem("line-height", 24);
-          text-align: left;
         }
-        .b-list-icon {
-          position: relative;
-          margin-top: 20px;
-          .b-item {
-            display: inline;
-            &:not(:first-child) {
-              margin-left: 20px;
-            }
+      }
+      .b-list-social {
+        display: block;
+        margin-top: 30px;
+        .b-item {
+          display: inline-block;
+          &:not(:first-child) {
+            margin-left: 10px;
           }
         }
       }
