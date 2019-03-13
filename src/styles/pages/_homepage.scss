@@ -1,0 +1,20 @@
+.b-page-counter {
+  display: block;
+  padding: 50px 0;
+  .b-block-main {
+    @include flexbox();
+    .b-block {
+      width: 20%;
+      text-align: center;
+      .b-text-title {
+        font-family: "Lato Bol";
+        color: $cl_black;
+        @include rem("font-size", 36);
+      }
+      .b-text-norm {
+        font-family: "Lato Light";
+        color: $cl_black;
+      }
+    }
+  }
+}
