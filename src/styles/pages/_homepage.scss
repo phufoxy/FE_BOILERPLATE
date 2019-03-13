@@ -1,0 +1,50 @@
+.b-page-person {
+  position: relative;
+  padding: 80px 0 120px 0;
+  background-image: url("../../images/bg_slider.png");
+  z-index: 99999;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/shadown-slider.png");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: center center;
+    @include transform(translate(-50%, -50%));
+  }
+  .b-slider {
+    // text-align: center;
+    .b-icon {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      border: 3px solid #f9f9f9;
+      border-radius: 100%;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 0px;
+    }
+    .b-info {
+      margin-top: 10px;
+      .b-text-norm {
+        color: $cl_white;
+        font-family: "Lato";
+        padding-left: 100px;
+        padding-right: 100px;
+        @include rem("font-size", 24);
+        @include rem("line-height", 30);
+      }
+      .b-text-person {
+        color: $cl_white;
+        font-family: "Lato";
+        @include rem("font-size", 16);
+        @include rem("line-height", 30);
+      }
+    }
+  }
+}
