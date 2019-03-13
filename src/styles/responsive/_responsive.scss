@@ -2,8 +2,10 @@ $break-large: 992px;
 $break-medium: 768px;
 .b-page-header {
   @media screen and(max-width:$break-medium) {
-    .b-register {
-      display: none;
+    .b-header {
+      .b-register {
+        display: none;
+      }
     }
   }
 }
