@@ -41,6 +41,10 @@
       background-repeat: no-repeat;
       background-size: 100% 100%;
       cursor: pointer;
+      @include transition(all 0.3s ease-in-out);
+      &:hover {
+        background-size: 110% 110%;
+      }
       .b-overlay {
         opacity: 0;
         @include transition(all 0.2s ease-in-out);
