@@ -1,0 +1,13 @@
+$break-large: 992px;
+$break-medium: 768px;
+.b-page-slider {
+  @media screen and(max-width:$break-large) {
+    .b-slider {
+      .b-item {
+        .b-content {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
