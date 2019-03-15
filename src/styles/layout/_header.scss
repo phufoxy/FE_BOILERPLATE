@@ -9,8 +9,8 @@
     height: 70px;
     position: relative;
     @include flexbox();
-    align-content: space-between;
-    align-items: center;
+    @include align-content(space-between);
+    @include align-items(center);
     .b-logo {
       width: 30%;
       img {
@@ -30,6 +30,9 @@
           @include rem("line-height", 30);
           font-family: "Lato Bol";
           color: $cl_white;
+          &:hover {
+            color: $cl_black;
+          }
         }
       }
     }
@@ -38,6 +41,9 @@
       right: 0;
       i {
         color: $cl_white;
+        &:hover {
+          color: $cl_black;
+        }
       }
     }
   }
