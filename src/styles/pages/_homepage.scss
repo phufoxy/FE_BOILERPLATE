@@ -86,3 +86,297 @@
     }
   }
 }
+::selection {
+  background-color: rgba(75, 193, 210, 1);
+}
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 100%;
+  background: rgba(75, 193, 210, 1);
+}
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  background: $cl_red;
+  border-radius: 50px;
+}
+body {
+  background-color: $cl_white;
+  @include rem("font-size", 14);
+  @include rem("line-height", 32);
+  margin: 0;
+  padding: 0;
+}
+.b-page-person {
+  position: relative;
+  padding: 80px 0 120px 0;
+  background-image: url("../../images/bg_slider.png");
+  z-index: 99999;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/shadown-slider.png");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: center center;
+    @include transform(translate(-50%, -50%));
+  }
+  .b-slider {
+    // text-align: center;
+    .b-icon {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      border: 3px solid #f9f9f9;
+      border-radius: 100%;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 0px;
+    }
+    .b-info {
+      margin-top: 10px;
+      .b-text-norm {
+        color: $cl_white;
+        font-family: "Lato";
+        padding-left: 100px;
+        padding-right: 100px;
+        @include rem("font-size", 24);
+        @include rem("line-height", 30);
+      }
+      .b-text-person {
+        color: $cl_white;
+        font-family: "Lato";
+        @include rem("font-size", 16);
+        @include rem("line-height", 30);
+      }
+    }
+  }
+}
+.b-page-introduc {
+  display: block;
+  padding-top: 100px;
+  background-color: #f7f7f7;
+  .b-block {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    .b-block-left {
+      position: relative;
+      width: 40%;
+      .b-images {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .b-block-right {
+      width: 50%;
+      .b-content {
+        padding: 50px 0;
+        .b-text-title {
+          font-family: "Lato Bol";
+          @include rem("font-size", 18);
+          color: $cl_black;
+          margin-bottom: 20px;
+        }
+        .b-text-norm {
+          font-family: "Lato";
+          @include rem("font-size", 16);
+        }
+      }
+      .b-list-social {
+        display: block;
+        margin-top: 30px;
+        .b-item {
+          display: inline-block;
+          &:not(:first-child) {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.b-page-eat {
+  position: relative;
+  padding: 80px 0;
+  .b-eat {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    .b-block-content {
+      width: 30%;
+      text-align: center;
+      cursor: pointer;
+      .b-content {
+        .b-icon {
+          position: relative;
+          width: 107px;
+          height: 107px;
+          border-radius: 100%;
+          margin: 0 auto;
+          border: 2px solid $cl_black;
+          margin-bottom: 5px;
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50px;
+            @include transform(translate(-50%, -50%));
+            @include transition(all 0.3s ease-in-out);
+            overflow: hidden;
+          }
+        }
+        .b-info {
+          .b-text-title {
+            font-family: "Lato Bol";
+            @include rem("font-size", 18);
+            @include rem("line-height", 30);
+            color: $cl_black;
+            margin-bottom: 10px;
+          }
+          .b-text-norm {
+            font-family: "Lato Light";
+            @include rem("font-size", 16);
+            @include rem("line-height", 20);
+            text-align: center;
+            color: $cl_black;
+          }
+        }
+      }
+    }
+  }
+}
+.b-page-slider {
+  position: relative;
+  z-index: 99;
+  background-image: url("../../images/bg_Rectangle.png");
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../images/shadown-slider.png");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0;
+    z-index: 0;
+  }
+  .b-slider {
+    position: relative;
+    z-index: 9999;
+    .b-item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      height: 300px;
+      .b-content {
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 60%;
+        @include transform-customize(translate(-50%, -50%));
+        .b-images {
+          width: 100px;
+          height: 100px;
+          margin: 0 auto;
+          border-radius: 100%;
+          border: 2px solid $cl_white;
+          background-size: 100%;
+          background-position: 100% 0;
+        }
+        .b-text-norm {
+          font-family: "Lato";
+          color: $cl_white;
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        .b-text-action {
+          font-family: "Lato Lig";
+          color: $cl_white;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.b-fullscreen {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  background-image: url("../../images/background-banner-top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-image: url("../../images/shadown.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .b-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform-customize(translate(-50%, -50%));
+    text-align: center;
+    .b-text-favorite {
+      font-family: "Times New Roman";
+      font-style: italic;
+      font-weight: bold;
+      @include rem("font-size", 36);
+      @include rem("line-height", 30);
+      color: rgba(255, 255, 255, 0.702);
+      margin-bottom: 40px;
+    }
+    .b-text-title {
+      font-family: "Lato Bol";
+      @include rem("font-size", 100);
+      @include rem("line-height", 30);
+      color: $cl_white;
+      margin-bottom: 50px;
+    }
+    .b-btn {
+      .b-link {
+        position: relative;
+        display: inline-block;
+        width: 247px;
+        border: 2px solid $cl_white;
+        background-color: rgba(246, 150, 121, 0);
+        border-radius: 3px;
+        font-family: "Lato Bol";
+        @include rem("font-size", 18);
+        @include rem("line-height", 21, 18);
+        padding: 10px 0;
+        color: $cl_white;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+    }
+    .b-text-norm {
+      font-family: "Lato Light";
+      @include rem("font-size", 14);
+      @include rem("line-height", 30);
+      color: $cl_white;
+    }
+  }
+}
