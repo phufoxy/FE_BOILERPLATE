@@ -1,3 +1,94 @@
+
+.b-dot {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    border-radius: 100%;
+    background-color: $cl_red;
+    left: 50%;
+    bottom: -5px;
+    @include transform-customize(translate(-50%, 0));
+  }
+  &.left {
+    &::after {
+      left: 0;
+      @include transform-customize(translate(0%, 0));
+    }
+  }
+}
+::selection {
+  background-color: rgba(75, 193, 210, 1);
+}
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 100%;
+  background: rgba(75, 193, 210, 1);
+}
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  background: $cl_red;
+  border-radius: 50px;
+}
+body {
+  background-color: $cl_white;
+  @include rem("font-size", 14);
+  @include rem("line-height", 32);
+  margin: 0;
+  padding: 0;
+}
+.b-page-eat {
+  position: relative;
+  padding: 80px 0;
+  .b-eat {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    .b-block-content {
+      width: 30%;
+      text-align: center;
+      cursor: pointer;
+      .b-content {
+        .b-icon {
+          position: relative;
+          width: 107px;
+          height: 107px;
+          border-radius: 100%;
+          margin: 0 auto;
+          border: 2px solid $cl_black;
+          margin-bottom: 5px;
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50px;
+            @include transform(translate(-50%, -50%));
+            @include transition(all 0.3s ease-in-out);
+            overflow: hidden;
+          }
+        }
+        .b-info {
+          .b-text-title {
+            font-family: "Lato Bol";
+            @include rem("font-size", 18);
+            @include rem("line-height", 30);
+            color: $cl_black;
+            margin-bottom: 10px;
+          }
+          .b-text-norm {
+            font-family: "Lato Light";
+            @include rem("font-size", 16);
+            @include rem("line-height", 20);
+            text-align: center;
+            color: $cl_black;
+          }
+        }
+      }
+    }
+  }
+}
 .b-fullscreen {
   position: relative;
   right: 0;
