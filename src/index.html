@@ -37,28 +37,28 @@
     <!-- include header.html -->
     <header class="b-page-header" id="b-page-header">
   <div class="container">
-    <div class="b-block-header">
-      <div class="b-logo">
-        <a href="#" class="b-link">
-          <img src="../../images/logo.png" alt="Logo" />
-        </a>
+      <div class="b-header">
+          <div class="b-logo">
+              <a href="#" class="b-link">
+                  <img src="./images/logo.png" alt="Log" />
+              </a>
+          </div>
+          <div class="b-register">
+              <ul class="b-list-item">
+                  <li class="b-item">
+                      <a href="#" class="b-link">LOGIN</a>
+                  </li>
+                  <li class="b-item">
+                      <a href="#" class="b-link">SIGN UP</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="b-toggle">
+              <a href="#">
+                  <i class="fas fa-bars"></i>
+              </a>
+          </div>
       </div>
-      <nav class="b-register">
-        <ul class="b-list-item">
-          <li class="b-item">
-            <a href="#" class="b-link">LOGIN</a>
-          </li>
-          <li class="b-item">
-            <a href="#" class="b-link">SIGN UP</a>
-          </li>
-          <li class="b-item b-toogle">
-            <a href="#" class="b-link">
-              <i class="fas fa-bars"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
   </div>
 </header>
 
@@ -73,7 +73,7 @@
         RECIPES
       </h2>
       <div class="b-btn">
-        <a href="#" class="b-link">GET STARTED</a>
+        <a href="#" class="b-link waves-effect  waves-light">GET STARTED</a>
       </div>
       <p class="b-text-norm">
         OR SEND US YOUR OWN RECIPES AND GET REWARDED!
@@ -347,6 +347,10 @@
   <!-- build:js(.) script/vendor.min.js -->
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endbuild -->
+<!-- build:js meteriallize -->
+<script type="text/javascript" src="node_modules/materialize-css/js/waves.js"></script>
+
 <!-- endbuild -->
 <!-- build:js script/script.min.js -->
 <script type="text/javascript" src="scripts/script.js"></script>
