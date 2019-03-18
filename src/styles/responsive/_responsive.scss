@@ -1,5 +1,14 @@
 $break-large: 992px;
 $break-medium: 768px;
+.b-page-header {
+  @media screen and(max-width:$break-medium) {
+    .b-header {
+      .b-register {
+        display: none;
+      }
+    }
+  }
+}
 .b-page-slider {
   @media screen and(max-width:$break-large) {
     .b-slider {
@@ -89,3 +98,5 @@ $break-medium: 768px;
     }
   }
 }
+
+
