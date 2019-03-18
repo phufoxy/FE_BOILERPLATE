@@ -1,0 +1,50 @@
+.b-page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  .b-header {
+    height: 70px;
+    position: relative;
+    @include flexbox();
+    @include align-content(space-between);
+    @include align-items(center);
+    .b-logo {
+      width: 30%;
+      img {
+        max-width: 100px;
+      }
+    }
+    .b-register {
+      width: 70%;
+      text-align: right;
+      padding-right: 30px;
+      .b-item {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        .b-link {
+          @include rem("font-size", 14);
+          @include rem("line-height", 30);
+          font-family: "Lato Bol";
+          color: $cl_white;
+          &:hover {
+            color: $cl_black;
+          }
+        }
+      }
+    }
+    .b-toggle {
+      position: absolute;
+      right: 0;
+      i {
+        color: $cl_white;
+        &:hover {
+          color: $cl_black;
+        }
+      }
+    }
+  }
+}
