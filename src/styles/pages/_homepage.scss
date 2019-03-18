@@ -1,0 +1,69 @@
+.b-fullscreen {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  background-image: url("../../images/background-banner-top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-image: url("../../images/shadown.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .b-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform-customize(translate(-50%, -50%));
+    text-align: center;
+    .b-text-favorite {
+      font-family: "Times New Roman";
+      font-style: italic;
+      font-weight: bold;
+      @include rem("font-size", 36);
+      @include rem("line-height", 30);
+      color: rgba(255, 255, 255, 0.702);
+      margin-bottom: 40px;
+    }
+    .b-text-title {
+      font-family: "Lato Bol";
+      @include rem("font-size", 100);
+      @include rem("line-height", 30);
+      color: $cl_white;
+      margin-bottom: 50px;
+    }
+    .b-btn {
+      .b-link {
+        position: relative;
+        display: inline-block;
+        width: 247px;
+        border: 2px solid $cl_white;
+        background-color: rgba(246, 150, 121, 0);
+        border-radius: 3px;
+        font-family: "Lato Bol";
+        @include rem("font-size", 18);
+        @include rem("line-height", 21, 18);
+        padding: 10px 0;
+        color: $cl_white;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+    }
+    .b-text-norm {
+      font-family: "Lato Light";
+      @include rem("font-size", 14);
+      @include rem("line-height", 30);
+      color: $cl_white;
+    }
+  }
+}
