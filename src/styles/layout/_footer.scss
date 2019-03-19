@@ -1,0 +1,31 @@
+.b-page-footer {
+  position: relative;
+  background-color: #f7f7f7;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  .b-block-footer {
+    @include flexbox();
+    @include align-content(space-between);
+    @include align-items(center);
+    height: 70px;
+    .b-info {
+      width: 50%;
+      .b-text-norm {
+        font-family: "Lato";
+        @include rem("font-size", 14);
+        color: rgba(139, 139, 139, 0.502);
+      }
+    }
+    .b-desin {
+      text-align: right;
+      width: 50%;
+      .b-text-title {
+        font-family: "Lato Bol";
+        color: rgba(139, 139, 139, 0.502);
+        @include rem("font-size", 14);
+        .is-current {
+          color: $cl_black;
+        }
+      }
+    }
+  }
+}
