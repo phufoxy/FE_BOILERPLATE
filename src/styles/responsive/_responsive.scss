@@ -1,5 +1,18 @@
 $break-large: 992px;
 $break-medium: 768px;
+.b-page-counter {
+  display: block;
+  padding: 50px 0;
+  @media screen and(max-width:$break-large) {
+    .b-block-main {
+      @include flexbox();
+      @include flex-wrap(wrap);
+      .b-block {
+        width: 50%;
+      }
+    }
+  }
+}
 .b-page-cusiness {
   @media screen and(max-width:$break-large) {
     .b-block-main {
@@ -135,7 +148,6 @@ $break-medium: 768px;
     }
   }
 }
-
 
 .b-page-header {
   @media screen and(max-width:$break-medium) {
