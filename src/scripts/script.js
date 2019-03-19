@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 wow = new WOW(
     {
         animateClass: 'animated',
@@ -9,7 +8,6 @@ wow = new WOW(
     }
 );
 wow.init();
-=======
 var a = 0;
 $(window).scroll(function () {
     var oTop = $('#counter').offset().top - window.innerHeight;
@@ -39,7 +37,6 @@ $(window).scroll(function () {
         a = 1;
     }
 })
->>>>>>> d967929fbc17429f9c2ecb5050ed1c37cd014e36
 
 $(document).ready(function () {
     $('.b-slider').slick({
