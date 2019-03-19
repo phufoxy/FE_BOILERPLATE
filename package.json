@@ -40,7 +40,8 @@
     "bootstrap": "^4.2.1",
     "jquery": "^2.2.0",
     "popper.js": "^1.14.3",
-    "wow.js": "^1.2.2"
+    "wow.js": "^1.2.2",
+    "slick-carousel": "^1.8.1",
     "materialize-css": "^1.0.0-rc.2"
   }
 }
